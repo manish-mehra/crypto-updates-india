@@ -38,7 +38,7 @@ export default function PriceTracker() {
   return(
       <div className="price-tracker">
         {error && <div className='price-tracker--error'></div>}
-
+        <h1 className='price-tracker--title'>Top Coins</h1>
        {
          coinData? 
          (

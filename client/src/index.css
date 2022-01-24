@@ -23,6 +23,27 @@ code {
   padding: 1em;
 }
 
+
+/* ----------- */
+/* Header */
+/* ----------- */
+
+header{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.header--title{
+  font-size: 3em;
+  margin-bottom: 5px;
+}
+
+.header--subtitle{
+  font-size:1em;
+  font-weight: 600;
+}
+
+
 /* ---------------------------- */
 /* Price Tracker Component */
 /* ---------------------------- */
@@ -34,6 +55,11 @@ code {
 }
 .price-tracker--error{
 
+}
+.price-tracker--title{
+  margin: 1em 0;
+  font-size: 2em;
+ 
 }
 
 /* Main */
@@ -127,7 +153,7 @@ News Headline Component
   margin-top: 2em;
 }
 .news-headlines h1{
-  font-size: 3em;
+  font-size: 2em;
   margin-top: 0.5em;
 
 }
