@@ -59,7 +59,8 @@ header{
 .price-tracker--title{
   margin: 1em 0;
   font-size: 2em;
- 
+ position: sticky;
+ left: 0;
 }
 
 /* Main */
