@@ -4,13 +4,16 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
-const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&ids=bitcoin%2C%20ethereum%2C%20tether%2C%20cardano%2C%20dogecoin&order=market_cap_desc&per_page=10&page=1&sparkline=false'
+
 
 export default function PriceTracker() {
 
     const [coinData, setCoinData] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+    const [cryptoCount, setCryptoCount] = useState(5)
+
+    const API_URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=${cryptoCount}&page=1&sparkline=false`
 
     const fetchData = async()=>{
         setLoading(true)
@@ -26,7 +29,7 @@ export default function PriceTracker() {
     }
     useEffect(()=>{
         fetchData()
-    }, [])
+    }, [cryptoCount])
 
   return(
       <div className="price-tracker">
@@ -70,10 +73,16 @@ export default function PriceTracker() {
                     </>)     
                 })          
             }
+            <p 
+            onClick={()=> setCryptoCount((prev)=> prev + 5)}
+            disabled = {loading}
+            className={`price-tracker--showMoreBtn ${loading? 'loading': ''}`}
+            >Show More</p>
         </div>
          ):
          <Skeleton count= {5} height='50px'/>
        }
+       
 
       </div>
   )

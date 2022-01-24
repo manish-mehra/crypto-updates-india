@@ -28,7 +28,6 @@ export default function NewsHeadlines() {
             const data = await res.json()
             setNewsData(data)
             setLoading(false)
-            console.log(data)
         } catch (error) {
             setError(error)
             setLoading(false)
@@ -59,26 +58,10 @@ export default function NewsHeadlines() {
         <section className='news-headlines--news-list'>
         
            {
-
             loading?
-  
-                    <SkeletonTheme color='#F5F5F5' highlightColor='#ffffff'>
-                    <div className='news-card'>
-                        <section className="news-card--content">
-                        {/* <a className='news-card--heading' href={data.link}>{data.heading}</a> */}
-                        <Skeleton height='25px'/>
-                        {/* <span className='news-card--date'>{data.time}</span> */}
-                        <Skeleton height='10px'/>
-                        {/* <p className='news-card--desc'>{data.content}</p> */}
-                        <Skeleton height='50px'/>
-                        </section>
-    
-                        <section>
-                        {/* <img src={data.image} alt={data.image} /> */}
-                        <Skeleton height='60px'/>
-                        </section>
-                </div>
-                </SkeletonTheme>
+            <SkeletonTheme color='#F5F5F5' highlightColor='#ffffff'>
+                <Skeleton height="150px" count ={7}/>
+            </SkeletonTheme>
             :
             (
                 newsData?.map((data)=>{

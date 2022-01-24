@@ -91,6 +91,26 @@ code {
   }
 }
 
+.price-tracker--showMoreBtn{
+  margin-top: 1em;
+  background: #171230;
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 0.5;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: sticky;
+  left: 0;
+}
+
+.loading{
+  content: 'loading...';
+  background: rgb(167, 167, 167);
+}
+
 /* 
 News Headline Component
 */

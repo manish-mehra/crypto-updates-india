@@ -12,7 +12,7 @@ export default function NewsCard({data}) {
             </section>
 
             <section>
-              <img src={data.image} alt={data.image} />
+              <img src={data?.image} alt={data.image} />
             </section>
         </div>
   )
