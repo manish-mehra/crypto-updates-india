@@ -1,5 +1,9 @@
 import {useState, useEffect} from 'react';
 
+import {format} from 'date-fns'
+import {GoTriangleUp} from 'react-icons/go'
+import {VscTriangleDown} from 'react-icons/vsc'
+
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -67,9 +71,12 @@ export default function PriceTracker() {
                             <span>₹ {eachCoinData.current_price}</span>
                             <span>₹ {eachCoinData.market_cap}</span>
                             <span>₹ {eachCoinData.total_volume}</span>
-                            <span className={eachCoinData.price_change_percentage_24h > 0? 'gain': 'loss'}>{eachCoinData.price_change_percentage_24h}%</span>
+                            <span 
+                            className={eachCoinData.price_change_percentage_24h > 0? 'gain': 'loss'}>{eachCoinData.price_change_percentage_24h  > 0?<GoTriangleUp /> :<VscTriangleDown/>}
+                            { eachCoinData.price_change_percentage_24h}%</span>
                             <span>{eachCoinData.circulating_supply}</span>
-                            <span>{eachCoinData.last_updated}</span>
+                            <span>
+                                {format(new Date(eachCoinData.last_updated), 'dd LLL yyy, E h:m b')}</span>
                     </>)     
                 })          
             }
