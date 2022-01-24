@@ -19,6 +19,9 @@ code {
     monospace;
 }
 
+.App{
+  padding: 1em;
+}
 
 /* ---------------------------- */
 /* Price Tracker Component */
@@ -26,7 +29,8 @@ code {
 
 .price-tracker{
   font-family: 'Poppins', sans-serif;
-
+  margin: 0 auto;
+  max-width: 1000px;
 }
 .price-tracker--error{
 
@@ -119,10 +123,18 @@ News Headline Component
 .news-headlines{
   max-width: 1000px;
   margin: 0 auto;
+  border-top: 1px solid rgba(143, 139, 139, 0.418);
+  margin-top: 2em;
+}
+.news-headlines h1{
+  font-size: 3em;
+  margin-top: 0.5em;
+
 }
 .news-headlines--channels{
   display: flex;
   flex-direction: row;
+  margin:2em 0;
 }
 .news-headlines--channel-btn {
   cursor: pointer;
@@ -135,6 +147,10 @@ News Headline Component
   color: white;
 }
 
+.news-headlines--news-list{
+  margin: 2em 0;
+}
+
 /* News Card Styling */
 
 .news-card{
@@ -143,7 +159,7 @@ News Headline Component
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   gap: 5px;
-
+  margin-bottom: 2em;
 }
 .news-card--content{
   display: flex;
@@ -163,7 +179,9 @@ News Headline Component
   font-weight: 600;
   color: #6d6d6d;
 }
-.news-card--desc{}
+.news-card--desc{
+  font-weight: 600;
+}
 
 /* ----------content end*/
 
