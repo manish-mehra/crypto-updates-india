@@ -1,4 +1,5 @@
 require('express-async-errors')
+require('dotenv').config()
 //packages
 const express = require('express')
 const app = express()
@@ -16,7 +17,7 @@ app.use('/api/v1', newsRouter)
 
 
 
-const port = 8080
+const port = process.env.PORT || 8080
 const start = async ()=>{
     try {
         app.listen(port, ()=>{

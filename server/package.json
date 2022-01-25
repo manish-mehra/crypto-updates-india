@@ -4,7 +4,8 @@
   "description": "scrape news from indian news site",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "news",
@@ -16,6 +17,7 @@
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
+    "dotenv": "^14.3.0",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1"
   },
