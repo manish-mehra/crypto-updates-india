@@ -42,7 +42,13 @@ header{
   font-size:1em;
   font-weight: 600;
 }
-
+.header--githubLink{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3px;
+  font-weight: 500;
+}
 
 /* ---------------------------- */
 /* Price Tracker Component */

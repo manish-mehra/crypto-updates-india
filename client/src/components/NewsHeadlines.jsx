@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import NewsCard from './NewsCard'
 
 
-const url = 'http://localhost:8080/api/v1/'
+const url = '  https://crypto-updates-india.herokuapp.com/api/v1/'
 export default function NewsHeadlines() {
 
     const [newsData, setNewsData]= useState(null)
@@ -65,7 +65,7 @@ export default function NewsHeadlines() {
             :
             (
                 newsData?.map((data)=>{
-                    return <NewsCard data = {data}/>
+                    return <NewsCard data = {data} key = {data.heading}/>
                 })
             )
            }

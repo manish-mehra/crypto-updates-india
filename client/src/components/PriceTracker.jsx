@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 
 import {format} from 'date-fns'
 import {GoTriangleUp} from 'react-icons/go'
@@ -55,7 +55,7 @@ export default function PriceTracker() {
             {
                 coinData.map((eachCoinData)=>{
                     return (
-                            <>   
+                            <React.Fragment key = {eachCoinData.id}>   
                             <div className='price-tracker--coinNames'>
                                 <span className='price-tracker--imageWrapper'>
                                     <img 
@@ -77,7 +77,7 @@ export default function PriceTracker() {
                             <span>{eachCoinData.circulating_supply}</span>
                             <span>
                                 {format(new Date(eachCoinData.last_updated), 'dd LLL yyy, E h:m b')}</span>
-                    </>)     
+                    </React.Fragment>)     
                 })          
             }
             <p 
