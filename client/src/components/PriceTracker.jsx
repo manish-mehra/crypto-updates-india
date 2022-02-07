@@ -68,9 +68,9 @@ export default function PriceTracker() {
                                 <span className='price-tracker--coinSymbol'>{eachCoinData.symbol.toUpperCase()}</span>
                             </div>
 
-                            <span>₹ {eachCoinData.current_price}</span>
-                            <span>₹ {eachCoinData.market_cap}</span>
-                            <span>₹ {eachCoinData.total_volume}</span>
+                            <span>₹&nbsp;{eachCoinData.current_price}</span>
+                            <span>₹&nbsp;{eachCoinData.market_cap}</span>
+                            <span>₹&nbsp;{eachCoinData.total_volume}</span>
                             <span 
                             className={eachCoinData.price_change_percentage_24h > 0? 'gain': 'loss'}>{eachCoinData.price_change_percentage_24h  > 0?<GoTriangleUp /> :<VscTriangleDown/>}
                             { eachCoinData.price_change_percentage_24h}%</span>
